@@ -3,19 +3,24 @@ extends:
   - 'plugin:import/errors'
   - 'plugin:react/recommended'
   - 'plugin:jsx-a11y/recommended'
+  - 'plugin:@typescript-eslint/recommended'
   - 'prettier'
 rules:
   react/prop-types: 0
   react/react-in-jsx-scope: 0
+  '@typescript-eslint/no-empty-function': 0
 plugins:
   - 'react'
   - 'import'
   - 'jsx-a11y'
+  - '@typescript-eslint'
+parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: 2022
   sourceType: module
   ecamFeature:
     jsx: true
+  project: './tsconfig.json'
 env:
   es6: true
   browser: true
@@ -23,7 +28,13 @@ env:
 settings:
   react:
     version: detect
+  import/parsers:
+    '@typescript-eslint/parser':
+      - '.ts'
+      - '.tsx'
   import/resolver:
+    typescript:
+      alwaysTryTypes: true
     node:
       extensions:
         - '.js'
