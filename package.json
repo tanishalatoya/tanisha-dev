@@ -3,19 +3,30 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.js",
+  "author": "Tanisha L Davey",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "pre-commit": "npm run format && lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tanisha L Davey",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "eslint"
+    ]
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
@@ -24,6 +35,8 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.31.8",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "vite": "^4.3.9"
   }
