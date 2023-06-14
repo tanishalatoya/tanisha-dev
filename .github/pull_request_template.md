@@ -1,14 +1,13 @@
-## Describe your changes
+### 🔃 Describe your changes
 - 
 
-## Issue ticket number
+### 🎫 Issue ticket number
 - 
 
-## 📸 Screenshot/Gif if applicable
-
-
-## 🧪 Tests completed
+### 📸 Screenshot/Gif if applicable
 - 
 
+### 🧪 Tests completed
+- 
 
 
