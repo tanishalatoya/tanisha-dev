@@ -10,9 +10,9 @@ rules:
 plugins:
   - 'react'
   - 'import'
-  - 'jsx-ally'
+  - 'jsx-a11y'
 parserOptions:
-  ecmaVersion: 2022,
+  ecmaVersion: 2022
   sourceType: module
   ecamFeature:
     jsx: true
