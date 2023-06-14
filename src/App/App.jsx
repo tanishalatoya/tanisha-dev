@@ -6,6 +6,6 @@ const App
     Hello World
     
     
-    </div>;
+    </div>
 
 export default App;

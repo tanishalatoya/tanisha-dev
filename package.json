@@ -15,8 +15,9 @@
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "pre-commit": "npm run format && lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pre-commit": "npm run format && npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -36,7 +37,6 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.31.8",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "vite": "^4.3.9"
   }
